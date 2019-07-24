@@ -1,6 +1,3 @@
-//@EliasHasle
-//Written while working for NTNU IHB in Ålesund, under @hmgaspar.
-
 function Samples() {
 	this.currentSample = -1;
 	this.playing = false;
@@ -150,8 +147,6 @@ Catmull-Rom patches on regular x,y grid.
 
 Reference for current math:
 	http://blogs.mathworks.com/graphics/2015/05/12/patch-work/
-Inspiration for future optimization:
-	http://www.mvps.org/DirectX/articles/shadeland/ (with download)
 */
 function Patches(size, segments, D, grid) {
 	this.size = size;
@@ -232,7 +227,7 @@ Object.assign(Patches.prototype, {
 			//let M=new THREE.Matrix4().getInverse(vessel.matrixWorld)
 			if (M !== undefined) {				
 				vxy.set(x,y,0).applyMatrix4(M);
-				x=vxy.x
+				x=vxy.x;
 				y=vxy.y; //discard v.z (=draft?)
 			}
 			
@@ -287,6 +282,8 @@ Object.assign(Patches.prototype, {
 	})()
 });
 
+//@EliasHasle
+
 /*Interpolate in time over samples grid to generate a samples grid for 
 the current time. Then use catmull-rom patches to interpolate between the grid cells.
 */
@@ -312,4 +309,4 @@ Object.assign(DynamicPatches.prototype, {
 	})()
 });
 
-export {Samples, Patches, DynamicPatches};
+export { DynamicPatches, Patches, Samples };
