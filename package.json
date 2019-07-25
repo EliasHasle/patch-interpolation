@@ -1,6 +1,6 @@
 {
 	"name": "patch-interpolation",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"type": "module",
 	"repository": "https://github.com/EliasHasle/patch-interpolation.git",
 	"main": "src/main.js",
