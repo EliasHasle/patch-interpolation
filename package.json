@@ -1,8 +1,9 @@
 {
 	"name": "patch-interpolation",
-	"version": "0.0.1",
+	"version": "0.0.2",
+	"type": "module",
 	"repository": "https://github.com/EliasHasle/patch-interpolation.git",
-	"main": "build/patch-interpolation.js",
+	"main": "src/main.js",
 	"description": "Catmull-Rom patch interpolation",
 	"scripts": {
 		"build": "rollup -c"
