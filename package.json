@@ -6,7 +6,7 @@
 	"deprecated": false,
 	"description": "Catmull-Rom patch interpolation",
 	"homepage": "https://github.com/EliasHasle/patch-interpolation#readme",
-	"main": "src/main.js",
+	"main": "./index.js",
 	"name": "patch-interpolation",
 	"repository": {
 	"type": "git",
@@ -16,5 +16,5 @@
 	"build": "rollup -c"
 	},
 	"type": "module",
-	"version": "0.0.3"
+	"version": "0.0.4"
 }
