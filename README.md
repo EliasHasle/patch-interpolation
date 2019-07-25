@@ -7,4 +7,4 @@ Install as ES Module with npm (requires git):
 
 A UMD bundle, compatible with CommonJS and usage in browsers via the script tag, resides in the `build` folder.
 
-<a href="./build/patch-interpolation.js" download="patch-interpolation.js">Click here to download UMD bundle</a>
+<a href="https://github.com/EliasHasle/patch-interpolation/blob/213aefc6f297b5dac47cc09897e2300f75dce0c4/build/patch-interpolation.js" download="patch-interpolation.js">Click here to download UMD bundle</a>
