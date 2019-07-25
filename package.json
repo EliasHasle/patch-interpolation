@@ -1,20 +1,22 @@
 {
 	"bugs": {
-	"url": "https://github.com/EliasHasle/patch-interpolation/issues"
+		"url": "https://github.com/EliasHasle/patch-interpolation/issues"
 	},
-	"bundleDependencies": false,
+	"dependencies": {
+		"three": "^0.106.2"
+	},
 	"deprecated": false,
 	"description": "Catmull-Rom patch interpolation",
 	"homepage": "https://github.com/EliasHasle/patch-interpolation#readme",
 	"main": "./index.js",
 	"name": "patch-interpolation",
 	"repository": {
-	"type": "git",
-	"url": "git+https://github.com/EliasHasle/patch-interpolation.git"
+		"type": "git",
+		"url": "git+https://github.com/EliasHasle/patch-interpolation.git"
 	},
 	"scripts": {
-	"build": "rollup -c"
+		"build": "rollup -c"
 	},
 	"type": "module",
-	"version": "0.0.4"
+	"version": "0.0.5"
 }

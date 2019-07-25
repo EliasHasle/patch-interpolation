@@ -3,6 +3,8 @@ export default {
 	output: {
 		file: "build/patch-interpolation.js",
 		format: "umd",
-		name: "patch-interpolation"
-	}
+		name: "patch-interpolation",
+		globals: {"three": "THREE"}
+	},
+	external: ["three"]
 };

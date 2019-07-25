@@ -1,8 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-	typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	(global = global || self, factory(global['patch-interpolation'] = {}));
-}(this, function (exports) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('three')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'three'], factory) :
+	(global = global || self, factory(global['patch-interpolation'] = {}, global.THREE));
+}(this, function (exports, three) { 'use strict';
 
 	function Samples() {
 		this.currentSample = -1;
@@ -170,14 +170,14 @@
 		//(this.a is already defined and allocated).
 		generateCoeffs: (function() {
 			//M holds the Catmull-Rom patch matrix
-			const M = new THREE.Matrix4().set(
+			const M = new three.Matrix4().set(
 				-0.5,	1.5,	-1.5,	0.5,
 				1,		-2.5,	2,		-0.5,
 				-0.5,	0,		0.5,	0,
 				0,		1,		0,		0
 			);
-			const MT = new THREE.Matrix4().copy(M).transpose();
-			let PZ = new THREE.Matrix4(); //holder for PZ
+			const MT = new three.Matrix4().copy(M).transpose();
+			let PZ = new three.Matrix4(); //holder for PZ
 			let pz = new Float32Array(16);
 
 			return function(grid) {
@@ -222,15 +222,15 @@
 			};
 		})(),
 		calculateZ: (function() {
-			let vxy = new THREE.Vector3();
-			let C = new THREE.Matrix4();
-			let up = new THREE.Vector4();
-			let vp = new THREE.Vector4();
+			let vxy = new three.Vector3();
+			let C = new three.Matrix4();
+			let up = new three.Vector4();
+			let vp = new three.Vector4();
 			
 			return function(x,y,M) {
 				
 				//M is a transform matrix to be applied to every point before converting to data coordinates, typically defined like this:
-				//let M=new THREE.Matrix4().getInverse(vessel.matrixWorld)
+				//let M=new Matrix4().getInverse(vessel.matrixWorld)
 				if (M !== undefined) {				
 					vxy.set(x,y,0).applyMatrix4(M);
 					x=vxy.x;
