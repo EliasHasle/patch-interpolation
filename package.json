@@ -3,7 +3,7 @@
 		"url": "https://github.com/EliasHasle/patch-interpolation/issues"
 	},
 	"dependencies": {
-		"three": "^0.106.2"
+		"three": "^0.125.0"
 	},
 	"deprecated": false,
 	"description": "Catmull-Rom patch interpolation",
